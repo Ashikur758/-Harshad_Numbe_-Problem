@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();
+        int sum = 0;
+        int y = x;
+
+        while (y > 0) {
+            sum += y % 10;
+            y = y / 10;
+        }
+
+        if (x % sum == 0)
+            System.out.println("Harshad Number");
+        else
+            System.out.println("Not Harshad Number");
+    }
+}
